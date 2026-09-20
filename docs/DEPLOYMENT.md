@@ -9,7 +9,7 @@
 
 ## 2. Test the included UI
 ```bash
-npm install
+npm ci
 npm run build
 npm run dev
 ```
@@ -36,6 +36,11 @@ npm run dev
 Validate sign-in, least-privilege access, empty/error states, hotspot selection, action creation and no cross-user data leakage.
 
 ## 7. Preview and deploy
+
+The repository's GitHub Pages workflow publishes a sample-data demonstration from `main`. This public demo is for product walkthroughs only and must not be connected to tenant telemetry or presented as a production deployment.
+
+For a Fabric deployment:
+
 ```bash
 npx rayfin up --dry-run
 npx rayfin up
