@@ -21,6 +21,21 @@
 > [!IMPORTANT]
 > This repository is an accelerator/reference implementation, not a Microsoft product. The interface uses clearly labelled sample telemetry. Connect an approved source and complete your organization's security, privacy, accessibility, and operational reviews before production use.
 
+## Current integration status
+
+| Capability | Status |
+| --- | --- |
+| Dashboard and investigation experience | Working |
+| Deterministic recommendation engine | Working with sample telemetry |
+| Telemetry provider abstraction | Implemented |
+| Sample telemetry provider | Implemented and enabled by default |
+| Live Fabric telemetry connector | Not implemented; approved source required |
+| Authentication and tenant authorization | Not implemented |
+| Persistent investigation and action storage | Not implemented |
+| Public demonstration | Sample data only |
+
+The UI consumes telemetry asynchronously through a provider contract. It does not import sample telemetry directly, silently fall back to sample data, or place Fabric credentials in the browser.
+
 ## Why it matters
 
 Capacity teams often have the signal but lack a consistent path from telemetry to ownership. This accelerator demonstrates one connected workflow:
@@ -93,6 +108,8 @@ Open the local URL shown by Vite. To validate the optimized build:
 npm run build
 npm run preview
 ```
+
+Copy `.env.example` to `.env` when you need explicit local configuration. The checked-in implementation supports `VITE_TELEMETRY_MODE=sample`. Setting `api` intentionally produces an unavailable-source state until an approved backend provider is implemented.
 
 ## Explore and extend
 
