@@ -1,0 +1,13 @@
+// Illustrative entity: verify decorator syntax against your installed Rayfin version.
+import { entity, uuid, text, date } from "@microsoft/rayfin-core";
+@entity()
+export class Recommendation {
+  @uuid() id!: string;
+  @text() investigationId!: string;
+  @text() category!: string;
+  @text() title!: string;
+  @text() description!: string;
+  @text() priority!: string;
+  @text() status!: string;
+  @date() createdAt!: Date;
+}

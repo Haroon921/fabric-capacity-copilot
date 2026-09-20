@@ -1,0 +1,2 @@
+npm install completed
+npm run build exit code: 0

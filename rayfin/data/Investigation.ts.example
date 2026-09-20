@@ -1,0 +1,13 @@
+// Illustrative Rayfin entity. Align decorator imports with the CLI version in your scaffold.
+import { entity, uuid, text, date } from "@microsoft/rayfin-core";
+@entity()
+export class Investigation {
+  @uuid() id!: string;
+  @text() title!: string;
+  @text() capacityId!: string;
+  @text({ optional: true }) workspaceId?: string;
+  @text({ optional: true }) itemId?: string;
+  @text() severity!: string;
+  @text() status!: string;
+  @date() createdAt!: Date;
+}

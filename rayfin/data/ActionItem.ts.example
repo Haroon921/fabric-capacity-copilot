@@ -1,0 +1,11 @@
+// Illustrative entity: verify decorator syntax against your installed Rayfin version.
+import { entity, uuid, text, date } from "@microsoft/rayfin-core";
+@entity()
+export class ActionItem {
+  @uuid() id!: string;
+  @text() investigationId!: string;
+  @text() title!: string;
+  @text() owner!: string;
+  @text() status!: string;
+  @date({ optional: true }) dueDate?: Date;
+}
