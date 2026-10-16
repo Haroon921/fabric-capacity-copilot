@@ -15,6 +15,14 @@ npm run dev
 ```
 Confirm that the banner says the app uses sample data.
 
+The checked-in implementation supports only:
+
+```env
+VITE_TELEMETRY_MODE=sample
+```
+
+`VITE_TELEMETRY_MODE=api` is reserved for an approved backend implementation and currently renders an explicit unavailable-source state. Do not place Fabric secrets in any `VITE_` variable because Vite exposes those values to the browser.
+
 ## 3. Create the official Rayfin scaffold
 Because Fabric Apps and Rayfin are preview capabilities, create a fresh scaffold with the current CLI rather than treating this ZIP's illustrative `rayfin` folder as version-locked configuration.
 ```bash
@@ -27,6 +35,8 @@ Use the three `.example` entity files as a model. Rename them to `.ts` only afte
 
 ## 5. Connect telemetry
 Follow `DATA-INTEGRATION.md`. Keep sample mode enabled until the adapter returns validated authoritative data. Never silently fall back from live telemetry to sample data.
+
+The production browser should call a secure backend. The backend—not React—must authenticate to the approved Fabric telemetry source, enforce tenant and capacity scope, and normalize the response into the provider contract.
 
 ## 6. Local validation
 ```bash

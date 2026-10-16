@@ -24,3 +24,10 @@ Change `--private` only when organizational approval permits wider visibility.
 
 ## Recommended repository topics
 `microsoft-fabric`, `rayfin`, `capacity-management`, `finops`, `typescript`, `react`, `accelerator`
+
+## Repository presentation
+
+- Set the website URL to `https://haroon921.github.io/fabric-capacity-copilot/`.
+- In **Settings → General → Social preview**, upload `docs/assets/social-preview.png`.
+- Use `docs/assets/product-walkthrough.gif` in the README for the product walkthrough.
+- Publish the PowerPoint from `docs/Fabric-Capacity-Copilot-Overview.pptx` with each release.
